@@ -120,8 +120,10 @@ class WP_Prex {
 
 		return array(
 			'items_removed'  => 1,
-			'items_retained' => false, // always false in this example
-			'messages'       => array(), // no messages in this example
+			'items_retained' => false,
+			// always false in this example
+			'messages'       => array( sprintf( 'Delete user entity for %s', $email_address ) ),
+			// no messages in this example
 			'done'           => $done,
 		);
 	}
