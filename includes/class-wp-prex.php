@@ -74,6 +74,16 @@ class WP_Prex {
 
 	public function load_hooks() {
 		$this->loader->add_filter( 'wp_privacy_personal_data_erasers', $this, 'register_extended_erasers', 10 );
+		$this->loader->add_filter( 'gform_ip_address', $this, 'block_ip_record', 10 );
+	}
+
+	/**
+	 * Block ip record.
+	 *
+	 * @return string Empty string.
+	 */
+	function block_ip_record() {
+		return __return_empty_string();
 	}
 
 	/**
